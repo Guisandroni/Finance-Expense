@@ -1,0 +1,88 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "description": "App web",
+            "type": "entrando",
+            "category": "venda",
+            "price": 2000,
+            "createdAt": "2025-03-29T16:54:03.525Z"
+        },
+        {
+            "id": 2,
+            "description": "Manutenção servidor",
+            "type": "saindo",
+            "category": "infraestrutura",
+            "price": 500,
+            "createdAt": "2025-03-29T10:30:00.000Z"
+        },
+        {
+            "id": 3,
+            "description": "Freelance design",
+            "type": "entrando",
+            "category": "venda",
+            "price": 1200,
+            "createdAt": "2025-03-28T14:15:22.123Z"
+        },
+        {
+            "id": 4,
+            "description": "Licença software",
+            "type": "saindo",
+            "category": "ferramentas",
+            "price": 300,
+            "createdAt": "2025-03-27T09:45:00.789Z"
+        },
+        {
+            "id": 5,
+            "description": "Consultoria",
+            "type": "entrando",
+            "category": "serviço",
+            "price": 800,
+            "createdAt": "2025-03-26T18:20:15.456Z"
+        },
+        
+
+
+        {
+            "id": 5,
+            "description": "Consultoria",
+            "type": "entrando",
+            "category": "serviço",
+            "price": 800,
+            "createdAt": "2025-03-26T18:20:15.456Z"
+        },
+        {
+            "id": 5,
+            "description": "Consultoria",
+            "type": "entrando",
+            "category": "serviço",
+            "price": 800,
+            "createdAt": "2025-03-26T18:20:15.456Z"
+        },
+        {
+            "id": 5,
+            "description": "Consultoria",
+            "type": "entrando",
+            "category": "serviço",
+            "price": 800,
+            "createdAt": "2025-03-26T18:20:15.456Z"
+        },
+        {
+            "id": 5,
+            "description": "Consultoria",
+            "type": "entrando",
+            "category": "serviço",
+            "price": 800,
+            "createdAt": "2025-03-26T18:20:15.456Z"
+        },
+        {
+            "id": 5,
+            "description": "Consultoria",
+            "type": "entrando",
+            "category": "serviço",
+            "price": 800,
+            "createdAt": "2025-03-26T18:20:15.456Z"
+        }
+
+    ]
+}
