@@ -2,22 +2,28 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { MagnifyingGlass } from "@phosphor-icons/react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { TransactionContext } from "../../contexts/transactions_context";
+import {  useContext } from "react";
 
 const SearchParams = z.object({
-    paramsSearch: z.string().min(1, 'Busque uma transação')
+    query: z.string().min(1, 'Busque uma transação')
 })
 type SearchParamsInputs = z.infer<typeof SearchParams>
 
 export function Search() {
+
     const { register,
         handleSubmit,
         formState: { isSubmitting }
     } = useForm<SearchParamsInputs>({
         resolver: zodResolver(SearchParams)
     })
-    const handleSearchTransactions = async (data: SearchParamsInputs) => {
-        await new Promise(search => setTimeout(search, 1000))
-        console.log(data)
+
+    const {fetchTransactions} = useContext(TransactionContext)
+
+    const handleSearchTransactions =  async (data: SearchParamsInputs) => {
+        await fetchTransactions(data.query)
+        console.log('fazendo pesquisa', data.query)
     }
     return (
         <>
@@ -27,7 +33,7 @@ export function Search() {
                 <input
 
                     placeholder="Busque uma transação"
-                    {...register('paramsSearch')}
+                    {...register('query')}
                     type="text"
                     className="bg-base-gray1 w-full p-3 rounded-lg text-base-gray6 placeholder:text-base-gray6 " />
 
@@ -36,16 +42,16 @@ export function Search() {
                     disabled={isSubmitting}
 
                     className={`flex flex-row items-center justify-center  gap-2 text-green border border-bg-green px-6 rounded-lg py-2 
-                        ${isSubmitting ? 'cursor-pointer duration-200 '
-                            : 'cursor-not-allowed opacity-75'}`}>
+                        `}>
                     <MagnifyingGlass size={24} className="text-green" />
                     Buscar
                 </button>
 
             </form>
 
-
-
+{/* 
+            ${isSubmitting ? 'cursor-pointer duration-200 '
+                            : 'cursor-not-allowed opacity-75'} */}
 
         </>
     )

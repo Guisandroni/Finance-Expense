@@ -6,7 +6,7 @@ import { FormatDate, FormatPrice } from "../../utils/formatsInputs"
 
 export function Transactions() {
  const {transactions} = useContext(TransactionContext)
-    
+    console.log('retornando dados',transactions)
     return (
 
         <>
