@@ -7,13 +7,6 @@ import { FormatPrice } from "../../utils/formatsInputs";
 
 export function OutputCard(){
     const {transactions} = useContext(TransactionContext)
-    console.log(transactions)
-
-    const array =[10,10,10,2]
-    const soma = array.reduce((total,inicio)=>{
-        return total + inicio
-    },0)
-    console.log(soma)
 
     const sumary = transactions.reduce(
         (total,inicio)=>{
@@ -24,14 +17,14 @@ export function OutputCard(){
             total.saindo += inicio.price
             total.total -= inicio.price
         }
-
+    
         return total
     },{
         entrando:0,
         saindo:0,
         total:0
     })
-    console.log(sumary)
+    
     return(
         <>
         <div className="grid grid-cols-3 gap-4 mt-12">
